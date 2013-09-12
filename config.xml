@@ -13,6 +13,8 @@
         PhoneGap Team
     </author>
 
+    <access origin="www.adewalegeorge.com" subdomains="true" />
+
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
     <gap:plugin name="com.phonegap.plugins.childbrowser"/>
 

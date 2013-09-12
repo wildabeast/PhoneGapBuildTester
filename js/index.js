@@ -96,36 +96,15 @@ var app = {
 
     whitelist: function() {
 
-        app.xhr("https://tv.eurosport.com/", function(xhr) {
-            console.log("eurosport is invalid " + xhr.status);
-            console.log("eurosport: " + xhr.responseText.substring(0, 100));
-        });
-        /*
-        app.xhr("http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js", function(xhr) {
-            console.log("googleapis: should succeed: " + xhr.status);
-            console.log("googleapis: " + xhr.responseText.substring(0, 100));
+        app.xhr("https://www.nhl.com/", function(xhr) {
+            console.log("nhl.com: " + xhr.status);
+            console.log("nhl.com: " + xhr.responseText.substring(0, 100));
         });
 
-        app.xhr("http://code.jquery.com/jquery-1.10.2.min.js", function(xhr) {
-            console.log("jquery: should fail: " + xhr.status);
-            console.log("jquery: " + xhr.responseText.substring(0, 100));
+        app.xhr("https://www.adewalegeorge.com/", function(xhr) {
+            console.log("www.adewalegeorge.com: " + xhr.status);
+            console.log("www.adewalegeorge.com: " + xhr.responseText.substring(0, 100));
         });
-
-        app.xhr("http://phonegap.com", function(xhr) {
-            console.log("phonegap: should fail: " + xhr.status);
-            console.log("phonegap: " + xhr.responseText.substring(0, 100));
-        });
-
-        app.xhr("http://googleapis.com", function(xhr) {
-            console.log("googleapis.com: should succeed: " + xhr.status);
-            console.log("googleapis.com: " + xhr.responseText.substring(0, 100));
-        });
-
-        app.xhr("http://jquery.com", function(xhr) {
-            console.log("jquery.com: should succeed: " + xhr.status);
-            console.log("jquery.com: " + xhr.responseText.substring(0, 100));
-        });
-        */
 
     },
 
