@@ -52,7 +52,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
     onBatteryStatus: function() {
-        alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     },
     scan: function() {
         console.log('scanning');
