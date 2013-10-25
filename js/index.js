@@ -31,6 +31,7 @@ var app = {
         document.getElementById('encode').addEventListener('click', this.encode, false);
         document.getElementById('whitelist').addEventListener('click', this.whitelist, false);
         document.getElementById('camera').addEventListener('click', this.camera, false);
+        document.getElementById('video').addEventListener('click', this.captureVideo, false);
     },
     // deviceready Event Handler
     //
@@ -38,6 +39,7 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        console.log('CORDOVA VERSION: ' + window.device.cordova);
         window.addEventListener('batterystatus', app.onBatteryStatus, false);
     },
     // Update DOM on a Received Event
@@ -51,7 +53,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    onBatteryStatus: function() {
+    onBatteryStatus: function(info) {
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     },
     scan: function() {
@@ -153,6 +155,21 @@ var app = {
         };
         xhr1.open("GET", url, true);
         xhr1.send();
+    },
+
+    captureVideo: function() {
+        navigator.device.capture.captureVideo(function(mediaFiles)
+            {
+                console.log('CALLBACK!');
+                console.log(JSON.stringify(mediaFiles));
+            }, function(error)
+            {
+                console.log('Video capture failed');
+            },
+            {
+                limit: 1,
+                duration: 12
+            });
     }
 
 };
