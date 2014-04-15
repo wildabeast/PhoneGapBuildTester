@@ -41,6 +41,8 @@ var app = {
         app.receivedEvent('deviceready');
         console.log('CORDOVA VERSION: ' + window.device.cordova);
         window.addEventListener('batterystatus', app.onBatteryStatus, false);
+        StatusBar.overlaysWebView(false);
+        StatusBar.backgroundColorByName("red");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
