@@ -36,7 +36,7 @@
     <gap:plugin name="org.apache.cordova.vibration" />
  
     <!-- universal preferences -->
-    <preference name="phonegap-version"           value="3.0.0" />         
+    <preference name="phonegap-version"           value="3.3.0" />         
     <preference name="orientation"                value="default" />        
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
