@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.ryanw.barcodescanner"
         version   = "2.0.0">
-    <name>From a brizanch</name>
+    <name>From a tizag</name>
 
     <description>
         Tests shit from PhoneGap Build.
