@@ -14,7 +14,7 @@
     </author>
 
     <!-- third party plugins -->
-    <gap:plugin name="com.phonegap.plugins.barcodescannere"/>
+    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
     <gap:plugin name="org.apache.cordova.statusbar"/>
 
     <!-- core plugins -->
