@@ -1,6 +1,0 @@
-# bash
-rm ../buildtester.zip
-zip -r ../buildtester.zip ./*
-
-# prod
-curl -X PUT -F file=@/Users/ryanw/repo/buildtester.zip https://build.phonegap.com/api/v1/apps/1116963?auth_token=
