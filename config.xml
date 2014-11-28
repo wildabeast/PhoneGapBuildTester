@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.ryanw.barcodescanner"
-        version   = "2.0.0">
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id        = "TEST.com.fetch1.app"
+        version   = "2.0.1">
     <name>PhoneGapBuild Tester</name>
 
     <description>
@@ -14,33 +15,33 @@
     </author>
 
     <!-- third party plugins -->
-    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-    <gap:plugin name="org.apache.cordova.statusbar"/>
 
     <!-- core plugins -->
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.vibration" />
+
+    <gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="replace"> 
+        <string>OMG</string> 
+    </gap:config-file> 
+
+    <gap:config-file platform="ios" parent="UIStatusBarStyle" mode="delete"/> 
+
+    <gap:config-file platform="android" parent="/manifest"> 
+        <supports-screens android:xlargeScreens="false" android:largeScreens="false" android:smallScreens="false" />
+    </gap:config-file>
+
+
+    <gap:config-file platform="android" parent="/manifest" mode="delete">
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+    </gap:config-file>
  
     <!-- universal preferences -->
     <preference name="phonegap-version"           value="3.6.3" />         
-    <preference name="orientation"                value="default" />        
+    <preference name="orientation"                value="landscape" />        
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="load-url-timeout"           value="1000" />
+
+    <preference name="EnableViewportScale"        value="true" />
 
     <!-- ios preferences -->
     <!-- control whether the screen 'bounces' when scrolled beyond the top -->
@@ -53,8 +54,7 @@
     <preference name="ios-statusbarstyle"         value="black-opaque" />  
     <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system --> 
     <preference name="detect-data-types"          value="true" />   
-    <!-- ios: if set to true, app will terminate when home button is pressed -->        
-    <preference name="exit-on-suspend"            value="true" />
+    <!-- ios: if set to true, app will terminate when home button is pressed -->   
     <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->          
     <preference name="show-splash-screen-spinner" value="true" />   
     <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->        
@@ -68,8 +68,7 @@
     <preference name="android-targetSdkVersion"   value="13" />
     <preference name="android-maxSdkVersion"       value="17" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
-    <preference name="splashScreenDelay"       value="5000" />
-    <preference name="keepRunning"       value="false" />
+    <preference name="backupwebstorage" value="none"/>
 
     <!-- icons -->
     <!-- Define app icon for each platform. -->
@@ -98,4 +97,5 @@
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
     <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
+    <access origin="*" />
 </widget>
