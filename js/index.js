@@ -39,9 +39,14 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        console.log('CORDOVA VERSION: ' + window.device.cordova);
+        console.log('CORDOVA VERSION: ' + cordova.version);
         window.addEventListener('batterystatus', app.onBatteryStatus, false);
-        StatusBar.overlaysWebView(false);
+        if (window.StatusBar) {
+            window.StatusBar.overlaysWebView(false);
+        }
+        setTimeout(function() {
+            alert('ready');
+        }, 5000);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
