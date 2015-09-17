@@ -18,22 +18,22 @@
     <gap:plugin name="com.phonegap.plugins.barcodescanner" />
  
     <!-- core plugins -->
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="cordova-plugin-battery-status" source="npm" />
+    <gap:plugin name="cordova-plugin-camera" source="npm"/>
+    <gap:plugin name="cordova-plugin-media-capture" source="npm"/>
+    <gap:plugin name="cordova-plugin-console" source="npm"/>
+    <gap:plugin name="cordova-plugin-contacts" source="npm"/>
+    <gap:plugin name="cordova-plugin-device" source="npm"/>
+    <gap:plugin name="cordova-plugin-device-motion" source="npm"/>
+    <gap:plugin name="cordova-plugin-device-orientation" source="npm"/>
+    <gap:plugin name="cordova-plugin-file" source="npm"/>
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm"/>
+    <gap:plugin name="cordova-plugin-geolocation" source="npm"/>
+    <gap:plugin name="cordova-plugin-globalization" source="npm"/>
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
+    <gap:plugin name="cordova-plugin-media" source="npm"/>
+    <gap:plugin name="cordova-plugin-dialogs" source="npm"/>
+    <gap:plugin name="cordova-plugin-vibration" source="npm"/>
 
     <gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="replace"> 
         <string>OMG</string> 
