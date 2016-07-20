@@ -4,7 +4,7 @@
         xmlns:android   = "http://schemas.android.com/apk/res/android"
         id        = "TEST.com.fetch1.app"
         version   = "2.0.1">
-    <name>PhoneGapBuild Tester Name Change</name>
+    <name>PGB Windows Checker</name>
 
     <description>
         Tests shit from PhoneGap Build.
@@ -14,77 +14,9 @@
         PhoneGap Team
     </author>
 
-    <!-- third party plugins -->
-    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
- 
-    <!-- core plugins -->
-    <gap:plugin name="cordova-plugin-battery-status" source="npm" />
-    <gap:plugin name="cordova-plugin-camera" source="npm"/>
-    <gap:plugin name="cordova-plugin-media-capture" source="npm"/>
-    <gap:plugin name="cordova-plugin-console" source="npm"/>
-    <gap:plugin name="cordova-plugin-contacts" source="npm"/>
-    <gap:plugin name="cordova-plugin-device" source="npm"/>
-    <gap:plugin name="cordova-plugin-device-motion" source="npm"/>
-    <gap:plugin name="cordova-plugin-device-orientation" source="npm"/>
-    <gap:plugin name="cordova-plugin-file" source="npm"/>
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm"/>
-    <gap:plugin name="cordova-plugin-geolocation" source="npm"/>
-    <gap:plugin name="cordova-plugin-globalization" source="npm"/>
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
-    <gap:plugin name="cordova-plugin-media" source="npm"/>
-    <gap:plugin name="cordova-plugin-dialogs" source="npm"/>
-    <gap:plugin name="cordova-plugin-vibration" source="npm"/>
-
-    <gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="replace"> 
-        <string>OMG</string> 
-    </gap:config-file>  
-
-    <gap:config-file platform="ios" parent="UIStatusBarStyle" mode="delete"/> 
-
-    <gap:config-file platform="android" parent="/manifest"> 
-        <supports-screens android:xlargeScreens="false" android:largeScreens="false" android:smallScreens="false" />
-    </gap:config-file>
-
-
-    <gap:config-file platform="android" parent="/manifest" mode="delete">
-        <uses-permission android:name="android.permission.RECORD_VIDEO" />
-        <uses-permission android:name="android.permission.VIBRATE" />
-    </gap:config-file>
- 
     <!-- universal preferences -->
-    <preference name="phonegap-version"           value="cli-6.1.0" />           
-    <preference name="orientation"                value="portrait" />        
-    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
-    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
-    <preference name="load-url-timeout"           value="1000" />
-
-    <!-- ios preferences -->
-    <!-- control whether the screen 'bounces' when scrolled beyond the top -->
-    <preference name="webviewbounce"              value="false" />     
-    <!-- if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->     
-    <preference name="prerendered-icon"           value="true" />   
-    <!-- external links should open in the default browser, 'true' would use the webview the app lives in -->        
-    <preference name="stay-in-webview"            value="false" />     
-    <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->     
-    <preference name="ios-statusbarstyle"         value="black-opaque" />  
-    <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system --> 
-    <preference name="detect-data-types"          value="true" />   
-    <!-- ios: if set to true, app will terminate when home button is pressed -->   
-    <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->          
-    <preference name="show-splash-screen-spinner" value="true" />   
-    <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->        
-    <preference name="auto-hide-splash-screen"    value="true" />  
-
-    <!-- android preferences -->
-    <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->     
-    <preference name="android-minSdkVersion"      value="7" />    
-    <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->          
-    <preference name="android-installLocation"    value="auto" />           
-    <preference name="android-targetSdkVersion"   value="13" />
-    <preference name="android-maxSdkVersion"       value="17" />
-    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
-    <preference name="backupwebstorage" value="none"/>
-
+    <preference name="phonegap-version"           value="cli-6.1.0" />   
+    <platform name="windows" />     
     <!-- icons -->
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
