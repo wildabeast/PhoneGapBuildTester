@@ -52,7 +52,7 @@
     </gap:config-file>
  
     <!-- universal preferences -->
-    <preference name="phonegap-version"           value="cli-5.1.1" />           
+    <preference name="phonegap-version"           value="cli-6.1.0" />           
     <preference name="orientation"                value="portrait" />        
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
