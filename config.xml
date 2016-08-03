@@ -15,7 +15,7 @@
     </author>
 
     <!-- universal preferences -->
-    <preference name="phonegap-version"           value="cli-6.1.0" />   
+    <preference name="phonegap-version"           value="cli-6.3.0" />   
     <platform name="windows" />     
     <!-- icons -->
     <!-- Define app icon for each platform. -->
