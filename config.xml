@@ -4,7 +4,7 @@
         xmlns:android   = "http://schemas.android.com/apk/res/android"
         id        = "TEST.com.fetch1.app"
         version   = "2.0.1">
-    <name>PhoneGapBuild Tester Name Change</name>
+    <name>PGB Tester</name>
 
     <description>
         Tests shit from PhoneGap Build.
@@ -52,7 +52,7 @@
     </gap:config-file>
  
     <!-- universal preferences -->
-    <preference name="phonegap-version"           value="cli-6.1.0" />           
+    <preference name="phonegap-version"           value="cli-6.5.0" />           
     <preference name="orientation"                value="portrait" />        
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
